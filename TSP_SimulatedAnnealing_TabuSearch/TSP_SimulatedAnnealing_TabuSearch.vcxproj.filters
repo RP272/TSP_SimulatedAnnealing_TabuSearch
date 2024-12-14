@@ -21,15 +21,30 @@
     <ClCompile Include="DataManagement\FileReader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SimulatedAnnealing\SimulatedAnnealing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NearestNeighbor\NearestNeighbor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DataManagement\FileReader.hpp">
+    <ClInclude Include="DataManagement\FileReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DataManagement\InputData.hpp">
+    <ClInclude Include="DataManagement\InputData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DataManagement\ConfigurationData.hpp">
+    <ClInclude Include="DataManagement\ConfigurationData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SimulatedAnnealing\SimulatedAnnealing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NearestNeighbor\NearestNeighbor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Path\Path.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

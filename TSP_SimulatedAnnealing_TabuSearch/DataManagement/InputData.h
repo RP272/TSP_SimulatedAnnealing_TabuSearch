@@ -1,5 +1,5 @@
-#ifndef INPUTDATA_HPP
-#define INPUTDATA_HPP
+#ifndef INPUTDATA_H
+#define INPUTDATA_H
 
 struct InputData
 {

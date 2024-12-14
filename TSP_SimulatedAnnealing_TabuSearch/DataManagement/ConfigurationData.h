@@ -1,5 +1,5 @@
-#ifndef CONFIGURATIONDATA_HPP
-#define CONFIGURATIONDATA_HPP
+#ifndef CONFIGURATIONDATA_H
+#define CONFIGURATIONDATA_H
 #include <string>
 
 struct ConfigurationData

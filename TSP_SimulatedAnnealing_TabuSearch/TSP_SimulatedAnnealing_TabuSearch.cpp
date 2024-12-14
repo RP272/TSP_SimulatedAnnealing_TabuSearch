@@ -1,12 +1,15 @@
-// TSP_SimulatedAnnealing_TabuSearch.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
-#include "DataManagement/FileReader.hpp"
+#include "DataManagement/FileReader.h"
+#include "NearestNeighbor/NearestNeighbor.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
     ConfigurationData config = FileReader::readConfigurationDataFile();
-    InputData result = FileReader::readInputDataFile(config);
+    InputData inputData = FileReader::readInputDataFile(config);
+    Path startingPath = NearestNeighbor::solveTSP(inputData);
+    for (int i = 0; i < startingPath.length; i++) {
+        std::cout << startingPath.cities[i] << "->";
+    }
+    std::cout << startingPath.cities[0];
 }

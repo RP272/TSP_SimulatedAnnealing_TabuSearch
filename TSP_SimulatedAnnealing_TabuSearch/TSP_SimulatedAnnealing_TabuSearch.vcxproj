@@ -128,12 +128,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DataManagement\FileReader.cpp" />
+    <ClCompile Include="NearestNeighbor\NearestNeighbor.cpp" />
+    <ClCompile Include="SimulatedAnnealing\SimulatedAnnealing.cpp" />
     <ClCompile Include="TSP_SimulatedAnnealing_TabuSearch.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DataManagement\ConfigurationData.hpp" />
-    <ClInclude Include="DataManagement\FileReader.hpp" />
-    <ClInclude Include="DataManagement\InputData.hpp" />
+    <ClInclude Include="DataManagement\ConfigurationData.h" />
+    <ClInclude Include="DataManagement\FileReader.h" />
+    <ClInclude Include="DataManagement\InputData.h" />
+    <ClInclude Include="NearestNeighbor\NearestNeighbor.h" />
+    <ClInclude Include="Path\Path.h" />
+    <ClInclude Include="SimulatedAnnealing\SimulatedAnnealing.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="configuration_file.txt" />

@@ -1,7 +1,7 @@
-#ifndef FILEREADER_HPP
-#define FILEREADER_HPP
-#include "InputData.hpp"
-#include "ConfigurationData.hpp"
+#ifndef FILEREADER_H
+#define FILEREADER_H
+#include "InputData.h"
+#include "ConfigurationData.h"
 
 class FileReader
 {
