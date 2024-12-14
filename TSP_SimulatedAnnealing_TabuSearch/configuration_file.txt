@@ -1,0 +1,3 @@
+filename:ftv47.atsp
+stopAfterNSeconds:100
+temperatureChangeParameter:0.9
