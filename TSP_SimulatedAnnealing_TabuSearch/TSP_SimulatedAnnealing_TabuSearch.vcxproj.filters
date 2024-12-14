@@ -27,6 +27,9 @@
     <ClCompile Include="NearestNeighbor\NearestNeighbor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DataManagement\RandomIntegerGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataManagement\FileReader.h">
@@ -45,6 +48,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Path\Path.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataManagement\RandomIntegerGenerator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
