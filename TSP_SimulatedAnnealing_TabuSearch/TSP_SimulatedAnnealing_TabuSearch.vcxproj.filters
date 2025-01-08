@@ -30,6 +30,9 @@
     <ClCompile Include="DataManagement\RandomIntegerGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Path\RandomPathGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataManagement\FileReader.h">
@@ -51,6 +54,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DataManagement\RandomIntegerGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Path\RandomPathGenerator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

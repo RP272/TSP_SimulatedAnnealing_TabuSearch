@@ -1,3 +1,8 @@
 filename:ftv47.atsp
 stopAfterNSeconds:120
-temperatureChangeParameter:0.9998
+temperatureChangeParameter:0.8
+outputFilename:Output\hehe.xd
+neighborGeneration(0 - twoSwap, 1 - twoOpt):0
+coolingScheme(0 - geo, 1 - log):0
+numberOfMeasurements:1
+minimalTemperature:100.0

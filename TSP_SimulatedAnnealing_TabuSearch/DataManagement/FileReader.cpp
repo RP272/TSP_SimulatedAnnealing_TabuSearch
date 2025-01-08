@@ -1,6 +1,7 @@
 ﻿#include "FileReader.h"
 #include <sstream>
 #include <fstream>
+#include <iostream>
 
 ConfigurationData FileReader::readConfigurationDataFile()
 {
@@ -14,6 +15,16 @@ ConfigurationData FileReader::readConfigurationDataFile()
         result.stopAfterNSeconds = std::stoi(line.substr(line.find(':') + 1));
         std::getline(configurationFile, line);
         result.temperatureChangeParameter = std::stof(line.substr(line.find(':') + 1));
+        std::getline(configurationFile, line);
+        result.outputFilename = line.substr(line.find(':') + 1);
+        std::getline(configurationFile, line);
+        result.neighborGeneration = std::stoi(line.substr(line.find(':') + 1));
+        std::getline(configurationFile, line);
+        result.coolingScheme = std::stoi(line.substr(line.find(':') + 1));
+        std::getline(configurationFile, line);
+        result.numberOfMeasurements = std::stoi(line.substr(line.find(':') + 1));
+        std::getline(configurationFile, line);
+        result.minimalTemperature = std::stof(line.substr(line.find(':') + 1));
     }
     configurationFile.close();
     return result;
@@ -42,21 +53,22 @@ InputData FileReader::readInputDataFile(ConfigurationData config)
         std::getline(inputFile, line);
 
         // pobierz wartości wag grafu
-        int rowCounter = 0, columnCounter, tmp;
+        int rowCounter = 0, columnCounter = 0, tmp;
         result.costMatrix = new int* [result.numberOfCities];
-        while (rowCounter < result.numberOfCities) {
-            result.costMatrix[rowCounter] = new int[result.numberOfCities];
-            columnCounter = 0;
-
-            while (columnCounter < result.numberOfCities) {
-                std::getline(inputFile, line);
-                std::istringstream row(line);
-                while (row >> tmp) {
-                    result.costMatrix[rowCounter][columnCounter] = tmp;
-                    columnCounter++;
+        for (int i = 0; i < result.numberOfCities; i++) {
+            result.costMatrix[i] = new int[result.numberOfCities];
+        }
+        
+        while (std::getline(inputFile, line)) {
+            std::istringstream row(line);
+            while (row >> tmp) {
+                result.costMatrix[rowCounter][columnCounter] = tmp;
+                columnCounter++;
+                if (columnCounter >= result.numberOfCities) {
+                    rowCounter++;
+                    columnCounter = 0;
                 }
             }
-            rowCounter++;
         }
     }
     inputFile.close();
